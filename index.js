@@ -257,6 +257,9 @@ export default function(value, nominatim_object, optional_conf_parm) {
     if (typeof value !== 'string') {
         throw t('no string');
     }
+
+    value = value.trim();
+
     if (/^(?:\s*;?)+$/.test(value)) {
         throw t('nothing');
     }
